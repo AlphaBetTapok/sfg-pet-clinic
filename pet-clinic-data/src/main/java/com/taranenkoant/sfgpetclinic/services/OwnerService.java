@@ -1,6 +1,6 @@
 package com.taranenkoant.sfgpetclinic.services;
 
-import com.taranenkoant.sfgpetckinic.model.Owner;
+import com.taranenkoant.sfgpetclinic.model.Owner;
 
 import java.util.Set;
 
