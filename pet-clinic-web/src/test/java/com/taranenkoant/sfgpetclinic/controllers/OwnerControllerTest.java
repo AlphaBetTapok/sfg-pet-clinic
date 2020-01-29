@@ -81,14 +81,14 @@ class OwnerControllerTest {
     }
 
     @Test
-    void processFindForWmptyReturnMany() throws Exception{
+    void processFindForEmptyReturnMany() throws Exception{
         when(ownerService.findAllByLastNameLike(anyString())).thenReturn(Arrays.asList(Owner.builder().id(1l).build(),
                 Owner.builder().id(2L).build()));
 
         mockMvc.perform(get("/owners")
                     .param("lasname", ""))
                 .andExpect(status().isOk())
-                .andExpect(view().name("owners/ownersList"))
+                .andExpect(view().name("owners/ownerList"))
                 .andExpect(model().attribute("selections", hasSize(2)));
     }
 
